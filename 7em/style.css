@@ -1,0 +1,176 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100VH;
+    background:#131313 ;
+}
+.contenaire{
+    position: relative;
+}
+.contenaire .card{
+    position: relative;
+  width: 300px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.contenaire .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9bdc28;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+
+}
+.contenaire .card:hover::before{
+    clip-path: circle(300px at 80% -20%);
+}
+.contenaire .card::after{
+    content: 'Nike';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+
+}
+.contenaire .card .imgbx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+   
+}
+.contenaire .card:hover .imgbx{
+    top: 0;
+    transform: translateY(0%);
+}
+.contenaire .card .imgbx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+    width: 270px;
+    
+}
+.contenaire .card .contentebx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+   transform: 1s;
+   z-index: 10;
+
+}
+.contenaire .card:hover .contentebx{
+    height: 210px;
+}
+.contenaire .card .contentebx h2{
+    position:relative ;
+   font-weight: 600;
+   letter-spacing: 1px;
+ color: #fff;
+}
+.contenaire .card .contentebx .size,
+.contenaire .card .contentebx .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.contenaire .card:hover .contentebx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.contenaire .card:hover .contentebx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+.contenaire .card:hover .contentebx .size h3,
+.contenaire .card:hover .contentebx .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+   margin-right: 10px;
+}
+.contenaire .card:hover .contentebx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+   transform:0.5s; 
+   color: #111;
+   border-radius: 4px;
+   cursor: pointer;
+}
+.contenaire .card:hover .contentebx .size span:hover{
+    background: #9bdc28;
+}
+.contenaire .card:hover .contentebx .color span{
+    width: 20px;
+    height: 20px;
+  background: #FF0;
+  border-radius: 50%;
+    margin: 0 5px;
+    cursor:pointer ;
+}
+.contenaire .card:hover .contentebx .color span:nth-child(2){
+    background: #9bdc28;
+}
+.contenaire .card:hover .contentebx .color span:nth-child(3){
+    background: #03A9f4;
+}
+.contenaire .card:hover .contentebx .color span:nth-child(4){
+    background: #e91e63;
+}
+.contenaire .card:hover .contentebx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transition: translateY(50px);
+    transition: 0.5s;
+}
+.contenaire .card:hover .contentebx a{
+    opacity: 1;
+    transition: translateY(0px);
+    transition-delay: 0.75s;
+}
